@@ -842,7 +842,7 @@ openerp.web_calendar = function(instance) {
                form_controller.on("load_record", self, function(){
                     button_delete = _.str.sprintf("<button class='oe_button oe_bold delme'><span> %s </span></button>",_t("Delete"));
                     button_edit = _.str.sprintf("<button class='oe_button oe_bold editme oe_highlight'><span> %s </span></button>",_t("Edit Event"));
-                    
+                    pop.$el.closest(".modal").find(".modal-footer").empty();
                     pop.$el.closest(".modal").find(".modal-footer").prepend(button_delete);
                     pop.$el.closest(".modal").find(".modal-footer").prepend(button_edit);
                     
